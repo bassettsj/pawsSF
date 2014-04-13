@@ -3,7 +3,8 @@
 # 2. config.build.yml
 # 3. config.yml
 
-name: pawsSF
+name: PAWS
+tagline: Pets are Wonderful Suppot
 description: PAWS (Pets are Wonderful Support) - The mission of PAWS is to preserve, support and nurture the human-animal bond for those most vulnerable in our community.
 author:
   name: Steven Bassett
