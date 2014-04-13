@@ -191,7 +191,6 @@ module.exports = function (grunt) {
       dist: {
         options: {
           dest: '<%= yeoman.dist %>',
-          baseurl: '/pawsSF'
         }
       },
       server: {
@@ -415,7 +414,7 @@ module.exports = function (grunt) {
     // Jekyll cleans files from the target directory, so must run first
     'jekyll:dist',
     'concurrent:dist',
-    'useminPrepare',
+    //'useminPrepare',
     'concat',
     'autoprefixer:dist',
     'cssmin',
@@ -423,7 +422,7 @@ module.exports = function (grunt) {
     'imagemin',
     'svgmin',
     'filerev',
-    'usemin',
+    //'usemin',
     'htmlmin'
     ]);
 

@@ -40,4 +40,4 @@ markdown: kramdown
 #     coderay_css: style
 
 pygments: false
-baseurl: ''
+baseurl: /
