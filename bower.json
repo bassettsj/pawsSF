@@ -1,11 +1,12 @@
 {
   "name": "pawssf",
   "version": "0.0.0",
-  "dependencies": {
-    "jquery": "~1.10.2",
-    "modernizr": "~2.7"
-  },
+  "description":"PAWS (Pets are Wonderful Support) - The mission of PAWS is to preserve, support and nurture the human-animal bond for those most vulnerable in our community.",
+  "repository":"https://github.com/bassettsj/pawsSF.git",
   "devDependencies": {
-    "bootstrap": "~3.1.1"
+    "bootstrap": "~3.1.1",
+    "jquery": "~1.10.2",
+    "modernizr": "~2.7",
+    "bootstrap-sass-official": "~3.1.1"
   }
 }
