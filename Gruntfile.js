@@ -320,7 +320,7 @@ module.exports = function (grunt) {
     buildcontrol: {
       dist: {
         options: {
-          remote: '../pawsSF-build',
+          remote: 'git@github.com:bassettsj/pawsSF.git',
           branch: 'gh-pages',
           commit: true,
           push: true
