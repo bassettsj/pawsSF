@@ -1,0 +1,19 @@
+---
+layout: default
+---
+{% if page.title %}
+<header>
+  <h1 class="page-header">{{ page.title }}</h1>
+  {% if page.tagline %}
+  <p class="lead">
+    {{ page.tagline }}
+  </p>
+  {% endif %}
+</header>
+{% endif %}
+{{ content }}
+<div class="row">
+  <div class="col-sm-9">
+  {% include homepage-blogposts.html %}
+  </div>
+</div>

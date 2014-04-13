@@ -7,13 +7,13 @@
         <span class="icon-bar" aria-hidden="true"></span>
         <span class="icon-bar" aria-hidden="true"></span>
       </button>
-      <a class="navbar-brand" href="#">{{site.name}}</a>
+      <a class="navbar-brand" href="{{site.baseurl}}">{{site.name}}</a>
     </div>
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        {% for item in site.data.main-navigation %}
+        {% for item in site.data.mainNavigation %}
           <li>
-            <a href="item.url">{{ item.name }}</a>
+            <a href="{{ site.bareurl }}{{ item.url}}">{{ item.name }}</a>
           </li>
         {% endfor %}
       </ul>
