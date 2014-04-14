@@ -225,10 +225,15 @@ module.exports = function (grunt) {
         }]
       }
     },
-    // Usemin adds files to concat
-    concat: {},
+
     // Usemin adds files to uglify
-    uglify: {},
+    uglify: {
+      dist: {
+        files: {
+          'app/js/bundle.min.js' : 'app/js/bundle.js'
+        }
+      }
+    },
     // Usemin adds files to cssmin
     cssmin: {
       dist: {
@@ -274,10 +279,10 @@ module.exports = function (grunt) {
             'fonts/**/*',
             // Like Jekyll, exclude files & folders prefixed with an underscore.
             '!**/_*{,/**}',
-            // Explicitly add any files your site needs for distribution here.
-            '_bower_components/jquery/jquery.js',
             'favicon.ico',
-            'apple-touch*.png'
+            'apple-touch*.png',
+            'js/*.js',
+            'css/*.css'
           ],
           dest: '<%= yeoman.dist %>'
         }]
@@ -346,8 +351,7 @@ module.exports = function (grunt) {
       ],
       dist: [
         'sass:dist',
-        'coffee:dist',
-        'copy:dist'
+        'browserify:dist'
       ]
     },
     browserify: {
@@ -403,15 +407,15 @@ module.exports = function (grunt) {
     // Jekyll cleans files from the target directory, so must run first
     'jekyll:dist',
     'concurrent:dist',
-    //'useminPrepare',
-    'concat',
+    'copy:dist',
+    'useminPrepare',
     'autoprefixer:dist',
     'cssmin',
     'uglify',
     'imagemin',
     'svgmin',
-    'filerev',
-    //'usemin',
+    //'filerev',
+    'usemin',
     'htmlmin'
     ]);
 
