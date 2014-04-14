@@ -346,17 +346,6 @@ module.exports = function (grunt) {
         'test/spec/**/*.js'
       ]
     },
-    csslint: {
-      options: {
-        csslintrc: '.csslintrc'
-      },
-      check: {
-        src: [
-          '<%= yeoman.app %>/css/**/*.css',
-          '<%= yeoman.app %>/_scss/**/*.scss'
-        ]
-      }
-    },
     concurrent: {
       server: [
         'sass:server',
@@ -369,6 +358,16 @@ module.exports = function (grunt) {
         'coffee:dist',
         'copy:dist'
       ]
+    },
+    browserify: {
+      dist: {
+        files: {
+          'app/js/bundle.js': ['app/_src/**/*.coffee', 'app/_src/**/*.js']
+        },
+        options: {
+          transform: ['coffeeify']
+        }
+      }
     }
   });
 
@@ -405,8 +404,7 @@ module.exports = function (grunt) {
     'sass:server',
     'coffeelint:check',
     'coffee:dist',
-    'jshint:all',
-    'csslint:check'
+    'jshint:all'
   ]);
 
   grunt.registerTask('build', [
